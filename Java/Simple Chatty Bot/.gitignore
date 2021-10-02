@@ -1,0 +1,12 @@
+.gradle/
+.idea/
+settings.gradle/
+build.gradle/
+course-info.yaml/
+course-remote-info.yaml/
+gradlew.bat/
+gradle/
+*.gradle
+*.yaml
+*.bat
+Simple Chatty Bot\gradlew

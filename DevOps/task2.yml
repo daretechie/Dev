@@ -1,0 +1,31 @@
+--- 
+- 
+  hosts: my_group
+  name: "update web servers"
+  become_user: root
+  tasks:
+  - 
+    name: Ensure apache is at the latest version
+    ansible.builtin.yum:
+      name: httpd
+      state: latest
+
+  - name: Write the apache config file
+    ansible.builtin.template:
+      dest: /var/www/html/current.html
+      src: current.html.j2
+    notify:
+    - Restart apache
+
+
+  - name: Ensure apache is running
+    ansible.builtin.service:
+      name: httpd
+      state: started
+
+  handlers:
+    - name: Restart apache
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
+      

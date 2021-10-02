@@ -1,0 +1,58 @@
+--- 
+- 
+  hosts: my_group
+  name: "update web servers"
+  become_user: root
+  tasks: 
+    - 
+      name: "Ensure apache is at the latest version"
+      yum: 
+        name: httpd
+        state: latest
+    - 
+      copy: 
+        dest: /var/www/html/currenttestfile.html
+        src: testfile.html
+      name: "copy a testfile"
+    - 
+      name: Write the apache current file
+      ansible.builtin.template:
+        dest: /var/www/html/current.html
+        src: current.html.j2
+- 
+  hosts: my_group
+  name: "install package"
+  tasks: 
+    - name: "ensure a list of packages installed"
+      ansible.builtin.yum:
+        name: "{{ packages }}"
+      vars: 
+        packages: 
+          - docker
+          - mariadb
+          - mysql       
+    
+      notify: 
+        - "start mariadb"
+        - "start docker"
+        - "start mysql"
+- 
+  hosts: my_group
+  handlers:
+    - 
+      name: "start mariadb"
+      ansible.builtin.service: 
+        name: mariadb
+        state: started
+      
+    - 
+      name: "start docker"
+      ansible.builtin.service: 
+        name: docker
+        state: started
+      
+    - 
+      name: "start mysql"
+      ansible.builtin.service: 
+        name: mysql
+        state: started

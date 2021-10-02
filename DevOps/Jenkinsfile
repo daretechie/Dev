@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    tools{
+        maven 'maven3'
+    }
+    stages{
+        stage('SCM'){
+            steps{
+                git 'https://github.com/javahometech/dockeransiblejenkins.git'
+            }
+        }
+        stage('Maven Build'){
+            sh "mvn clean packeage"
+
+        }
+    }
+}

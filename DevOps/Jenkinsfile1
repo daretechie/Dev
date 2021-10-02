@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('Testing pipeline') {
+            steps {
+                git credentialsId: 'GITHUB_ID', url: 'https://github.com/dhrey112/aws-elastic-beanstalk-express-js-sample.git'
+                echo "Hello World"
+            }
+        }
+
+        stage('Testing pipeline2') {
+            steps {
+                echo "World Hello"
+            }
+        }
+    }
+}

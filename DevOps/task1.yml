@@ -1,0 +1,53 @@
+#tasks
+---
+  - name: Ensure Apache is installed
+    ansible.builtin.yum:    
+      name: httpd
+      state: present
+
+  - name: Write the apache config file
+    ansible.builtin.template:
+      dest: /var/www/html/current.html
+      src: current.html.j2
+    notify:
+    - Restart apache
+
+ - name: Ensure Apache is running
+   service:
+     name: httpd
+     state: started
+     enabled: true
+
+---
+  -  name: Ensure Apache is installed
+     yum:
+       name: "{{package}}"
+     vars:
+       packages:
+       - httpd
+       - httpd-tools 
+
+
+# playbook
+---
+  -
+    hosts: my_group
+    name: Update web server
+    become: yes
+    become_user: root 
+    roles:
+      - apache
+      - tomcat
+
+---  
+  - name: restart tomcat
+    service:
+      name: tomcat
+      state: restarted
+
+handlers:
+  - name: restart Apache
+    service:
+      name: httpd
+      state: restarted
+    notify: restart  Apache
