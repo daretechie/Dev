@@ -1,0 +1,1 @@
+@py.exe C:\Users\DHREY\AppData\Local\Programs\Python\Python38\to\your\pythonScript.py %*
