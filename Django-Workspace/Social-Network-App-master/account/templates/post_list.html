@@ -1,0 +1,25 @@
+<!-- templates/post_list.html -->
+{% extends 'base.html' %}
+{% block title %}Posts{% endblock title %}
+{% block content %}
+    <h3>Your timeline</h3>
+{% for post in object_list %}
+<div class="card">
+    <div class="card-header">
+{#    <span class="font-weight-bold">{{ post.title }}</span>#}
+    <span class="font-weight-bold">{{ post.title }}</span>
+    <a href="{% url 'post_detail' post.pk %}">Read more...</a>
+    <br>
+<span class="text-muted">by {{ post.author }}
+    <br>
+{{ post.date }}</span>
+<br>
+</div>
+    <br>
+    <div class="card-body">{{ post.body }}<div class="card-footer text-center text-muted">
+    <a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a>
+</div>
+    </div>
+<br />
+{% endfor %}
+{% endblock content %}

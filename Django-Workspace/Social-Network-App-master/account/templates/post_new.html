@@ -1,0 +1,16 @@
+<!-- templates/article_new.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% crispy form form.helper %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Create new post</h3>
+            <form action="" method="post">{% csrf_token %}
+            {% crispy form %}
+            <button class="btn btn-success ml-2" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

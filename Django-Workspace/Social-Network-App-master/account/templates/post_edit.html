@@ -1,0 +1,16 @@
+<!-- templates/article_edit.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% crispy form form.helper %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Edit the "{{ post.title }}" post</h3>
+            <form action="" method="post">{% csrf_token %}
+                {% crispy form %}
+                <button class="btn btn-info ml-2" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
