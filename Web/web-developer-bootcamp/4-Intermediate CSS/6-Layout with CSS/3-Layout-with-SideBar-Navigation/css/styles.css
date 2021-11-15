@@ -1,0 +1,18 @@
+@import "header.css";
+@import "footer.css";
+@import "section.css";
+@import "nav.css";
+
+body {
+    width: 940px;
+    margin: 0 auto;
+    font: 10pt/1.5em "Georgia", Arial, sans-serif;
+}
+
+header, section, article, aside, #footer {
+    display: block;
+}
+
+aside {
+    float: left;
+}

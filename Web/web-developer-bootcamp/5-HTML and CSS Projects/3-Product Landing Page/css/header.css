@@ -1,0 +1,30 @@
+header {
+    background-image: url("../img/casper.jpg");
+    background-color: #69dce4;
+    text-align: center;
+    padding: 5px;
+    height: 450px;
+    display: block;
+}
+
+header p.top-liner {
+    font-size: 20px;
+}
+
+header a.main-button{
+    display: inline-block;
+    background-color: #1522cc;
+    border-radius: 5px;
+    margin-top: 80px;
+    padding: 15px;
+    color: white;
+
+}
+
+header p.footer-text{
+    padding-top: 150px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #50A5A8
+}

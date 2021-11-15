@@ -1,0 +1,9 @@
+
+header {
+    padding: 0px;
+    text-align: center;
+}
+
+section > article > header > h2 {
+    text-decoration: underline;
+}

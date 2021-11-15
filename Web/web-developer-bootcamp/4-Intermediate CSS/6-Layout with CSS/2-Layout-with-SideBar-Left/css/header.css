@@ -1,0 +1,9 @@
+header {
+    display: block;
+    padding: 0px;
+    text-align: center;
+}
+
+section > article > header {
+    text-decoration: underline;
+}

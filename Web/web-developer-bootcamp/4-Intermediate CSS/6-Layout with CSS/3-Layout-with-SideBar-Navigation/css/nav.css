@@ -1,0 +1,13 @@
+nav {
+    text-align: center;
+}
+
+nav p {
+    /* list-style-type: None; */
+    padding: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    margin: 0px 0px 0px 50px;
+    width: 100px;
+
+}

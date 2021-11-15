@@ -1,0 +1,54 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ff0000;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+header, nav, section, footer {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+header, footer {
+    padding: 20px 0;
+}
+
+nav, section {
+    padding: 200px 0;
+}
+
+/* page Layout */
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+nav, section, footer {
+    float: left;
+}
+
+nav {
+    width: 200px;
+    margin-right: 10px;
+} 
+
+section {
+    width: 750px;
+}
+
+footer {
+    width: 960px;
+}
+

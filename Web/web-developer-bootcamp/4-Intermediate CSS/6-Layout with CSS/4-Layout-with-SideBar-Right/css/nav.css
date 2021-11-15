@@ -1,0 +1,17 @@
+nav {
+    text-align: center;
+    
+    
+}
+
+nav ul{
+    list-style: none;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 0 0 50px;
+    width: 100px;
+}

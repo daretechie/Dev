@@ -1,0 +1,14 @@
+@import "header.css";
+@import "footer.css";
+@import "section.css";
+
+body {
+    width: 940px;
+    margin: 0 auto;
+    font: 10pt/1.5em "Georgia", Arial, Helvetica, sans-serif;
+}
+
+aside {
+    float: left;
+    display: block;
+}

@@ -1,0 +1,7 @@
+section {
+    display: block;
+    float: right;
+    width: 700px;
+    padding-left: 20px;
+    border-left: 2px dotted #7552d3;
+}

@@ -1,0 +1,4 @@
+section > article > header > h3{
+    text-decoration: underline;
+    display: block;
+}
