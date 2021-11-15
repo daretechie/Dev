@@ -1,5 +1,5 @@
 # Day 5 - Conditions & Control Flow
-_TThis is making decision. Boolean data type (True or False) are commonly used._
+_This is making decision. Boolean data type (True or False) are commonly used._
 
 __Reference__
 ```python3
