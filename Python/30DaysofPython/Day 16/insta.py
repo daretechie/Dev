@@ -1,6 +1,4 @@
-# import getpass
-# my_password = getpass.getpass("What is your password?\n")
-# print(my_password)
+
 
 from urllib.parse import urlparse
 import os
